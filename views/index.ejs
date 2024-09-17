@@ -1,0 +1,32 @@
+<%- include('./partials/header.ejs') %>
+
+<h1 class="text-center my-4">All Posts</h1>
+<% if (articles.length>0) { %>
+    <% articles.forEach((article, i)=> { %>
+        <div class="p-4 p-md-5 mb-4 col-8 mx-auto rounded text-body-emphasis bg-body-secondary">
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    <h1 class="display-4 fst-italic text-center"><%= article.title %></h1>
+                    <p class="lead my-3 text-center"><%= article.details %></p>
+                </div>
+
+                <div class="col-4 mx-auto text-center">
+                    <p class="lead mb-0 text-center mb-5"><%= article.date %></p>
+                    <form action="/edit/<%= i %>" method="GET">
+                        <button type="submit" class="mb-5">Edit</button>
+                    </form>
+                    <form action="/delete/<%= i %>?_method=DELETE" method="POST" class="mb-4">
+                        <button type="submit">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <% }) %>
+
+<% } else { %> 
+    <p>No posts available currently.</p>
+<% } %>
+
+<%- include('partials/footer.ejs') %>
+
+

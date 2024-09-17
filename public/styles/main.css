@@ -1,0 +1,33 @@
+.footer-text-primary {
+    color: #007bff;
+};
+
+
+h1 {
+    color: #007bff;
+}
+
+html{
+    height: 100%;
+}
+
+main {
+    flex: 1 0 auto;  /* This makes the main content area grow and take up available space */
+}
+
+footer {
+    flex-shrink: 0;  /* Prevent the footer from shrinking */
+}
+
+button {
+    width:100px;
+    height: 40px;
+    border: 0px;
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+}
+
+.lead {
+    font-weight: bold;
+}

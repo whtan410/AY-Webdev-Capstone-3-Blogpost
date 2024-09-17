@@ -1,0 +1,32 @@
+<%- include('partials/header.ejs') %>
+
+<div class="container mt-3">
+  <form action="/edit/<%= updateIndex %>?_method=PUT" method="POST">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+          <label for="title" class="form-label">Title:</label>
+          <input name="title" type="text" class="form-control"  placeholder="Title" value= "<%= currentPost["title"] %>"/>
+      </div>
+
+      <div class="col-md-6 mb-3">
+          <label for="dop" class="form-label">Date of Writing:</label>
+          <input type="date" id="date" name="date" class="form-control" value= "<%= currentPost["date"] %>">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 mb-3">
+        <label for="message">Post details:</label>
+        <textarea id="message" name="details" placeholder="Details" rows="15" class="form-control"><%= currentPost["details"] %></textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 text-center mb-5">
+        <input type="submit" value="SUBMIT" class="btn btn-primary">
+      </div>
+    </div>
+  </form>
+</div>
+
+<%- include('partials/footer.ejs') %>

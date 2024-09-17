@@ -1,0 +1,6 @@
+            <%#  
+            <li>
+                <strong>Title:</strong> <%= post.title %><br>
+                <strong>Details:</strong> <%= post.details %><br>
+                <strong>Date:</strong> <%= post.date %>
+            </li> %> 
